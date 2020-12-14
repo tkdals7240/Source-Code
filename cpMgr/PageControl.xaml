@@ -1,0 +1,63 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cpMgr"
+      xmlns:MyWpfControl="clr-namespace:MyWpfControl;assembly=MyWpfControl" x:Class="cpMgr.PageControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="539" d:DesignWidth="1010"
+      Title="CONTROL" Loaded="Page_Loaded" Unloaded="Page_Unloaded" Background="LightGray">
+
+    <Canvas>
+        <Border BorderBrush="Black" BorderThickness="1" Height="377" Canvas.Left="98" Canvas.Top="81" Width="823" Background="White">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="78,58,78,111"/>
+        </Border>
+        <Border Canvas.Left="98" Canvas.Top="45" Background="White" Height="37" Width="118" BorderThickness="1" BorderBrush="Black">
+        <Label Content="DOOR" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+        </Border>
+        <Label x:Name="lblMsg1" Content="MAIN OP The internal escape switch is pressed." Canvas.Left="177" Canvas.Top="106" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <MyWpfControl:StatusButton x:Name="btnStatus" Content="STATUS" Canvas.Left="322" Canvas.Top="184" Width="109" Height="43">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>Cyan</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnClose" Content="CLOSE" Canvas.Left="479" Canvas.Top="184" Width="233" Height="43">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>Red</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnDoorLock" Content="DOOR LOCK" Canvas.Left="322" Canvas.Top="259" Width="109" Height="43">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>Cyan</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnLockOff" Content="LOCK OFF" Canvas.Left="479" Canvas.Top="259" Width="109" Click="btnLockOff_Click" Height="43">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>Cyan</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnLockOn" Content="LOCK ON" Canvas.Left="603" Canvas.Top="259" Width="109" Click="btnLockOn_Click" Height="43">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>Cyan</Brush>
+                <Brush>LightGray</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <Label Content="If the door is closed but not" Canvas.Left="177" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+        <Label Content="LOCK ON" Canvas.Left="377" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <Label Content=", the drive" Canvas.Left="455" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+        <Label Content="POWER" Canvas.Left="533" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <Label Content="is not turned" Canvas.Left="593" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+        <Label Content="ON" Canvas.Left="695" Canvas.Top="353" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <Label Content="※ If not" Canvas.Left="177" Canvas.Top="381" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+        <Label Content="DOOR LOCK ON" Canvas.Left="245" Canvas.Top="381" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <Label Content="the" Canvas.Left="369" Canvas.Top="381" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+        <Label Content="SCREEN" Canvas.Left="406" Canvas.Top="381" FontSize="14" FontWeight="Bold" Foreground="Red"/>
+        <Label Content="will not switch." Canvas.Left="468" Canvas.Top="381" FontSize="14" FontWeight="Bold" Foreground="Black"/>
+
+    </Canvas>
+</Page>

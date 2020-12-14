@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cpMgr"
+        xmlns:MyWpfControl="clr-namespace:MyWpfControl;assembly=MyWpfControl" x:Class="cpMgr.DlgMaintrance"
+        mc:Ignorable="d"
+        Title="DlgMaintrance" Height="762" Width="1040">
+    <Canvas Background="Red">
+        <Label x:Name="lbDataTime" Content="yyyy/mm/dd hh:mm:ss" Canvas.Left="871" Canvas.Top="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Image Source="/Resources/DoNotTouch.png" Height="225" Canvas.Left="385" Canvas.Top="75" Width="225"/>
+        <Label Content="Do not operate" Foreground="White" Canvas.Left="411" Canvas.Top="305" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Equipment check Under repair" Foreground="White" Canvas.Left="355" Canvas.Top="347" FontSize="20" FontWeight="Bold"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="310" Canvas.Left="195" Canvas.Top="401" Width="691"/>
+        <ListView x:Name="listView1" Height="278" Canvas.Left="213" Canvas.Top="417" Width="549">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="Background" Value="{Binding brush}" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn Header="Date" Width="140" DisplayMemberBinding="{Binding time}"/>
+                    <GridViewColumn Header="Trig" Width="70">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextAlignment="Right" Text="{Binding no}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Message" Width="355" DisplayMemberBinding="{Binding message}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <MyWpfControl:StatusButton x:Name="btnLight" Content="LIGHT OFF" Canvas.Left="767" Canvas.Top="418" Width="108" Height="26" Click="btnLight_Click"/>
+        <MyWpfControl:StatusButton x:Name="btnBuzzer" Content="Buzzer Stop" Canvas.Left="767" Canvas.Top="460" Width="108" Height="26" Click="btnBuzzer_Click"/>
+        <MyWpfControl:StatusButton x:Name="btnReset" Content="Reset" Canvas.Left="767" Canvas.Top="502" Width="108" Height="26" Click="btnReset_Click"/>
+        <MyWpfControl:StatusButton Content="Exit" Canvas.Left="767" Canvas.Top="669" Width="108" Height="26" Click="btnExit_Click"/>
+    </Canvas>
+</Window>

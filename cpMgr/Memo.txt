@@ -1,0 +1,2 @@
+﻿1. Alarm 과 연결 된 Device 모르겠음.
+2. Light On Y091F->M3010으로 변경 확인 필요

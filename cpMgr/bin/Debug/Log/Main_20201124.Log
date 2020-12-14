@@ -1,0 +1,6 @@
+2020-11-24 08:59:22.505 INFO  MELSEC   Thread Run(Data Read Thread)
+2020-11-24 08:59:23.129 INFO  MELSEC   PLC Connected.
+2020-11-24 08:59:54.467 INFO  MELSEC   Thread Run(Data Read Thread)
+2020-11-24 09:00:00.150 ERROR MELSEC   PLC Connect Error.
+2020-11-24 09:01:32.183 INFO  MELSEC   Thread Run(Data Read Thread)
+2020-11-24 09:01:32.785 INFO  MELSEC   PLC Connected.

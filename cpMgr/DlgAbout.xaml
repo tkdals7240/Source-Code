@@ -1,0 +1,18 @@
+﻿<Window x:Class="cpMgr.DlgAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cpMgr"
+        mc:Ignorable="d"
+        Title="About" Height="260.493" Width="369.324" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Canvas Margin="0">
+        <Image Canvas.Left="109" Canvas.Top="34" Source="FMSTec.jpg"/>
+        <Label Content="FMSTec Charge Port Manager System." Canvas.Left="65" Canvas.Top="102"/>
+        <Label Content="Version. " Canvas.Left="65" Canvas.Top="128"/>
+        <Label x:Name="lblVersion" Content="0000-00-00 00:00:00" Canvas.Left="127" Canvas.Top="128" Foreground="Blue"/>
+        <Label Content="© 2020 FMSTec Corporation." Canvas.Left="65" Canvas.Top="154"/>
+        <Label Content="All rights reserved." Canvas.Left="65" Canvas.Top="180"/>
+        <Button Content="OK" Canvas.Left="253" Canvas.Top="183" Width="75" IsDefault="True" IsCancel="True"/>
+    </Canvas>
+</Window>

@@ -1,0 +1,148 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cpMgr"
+      xmlns:MyWpfControl="clr-namespace:MyWpfControl;assembly=MyWpfControl" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="cpMgr.PageOperator"
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="1025"
+      Title="OPERATOR" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="cvsMain">
+            <Label x:Name="txtRFID" Content="ABCDEFGHIJ" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Canvas.Left="245" Canvas.Top="235"/>
+            <MyWpfControl:ImageBorder x:Name="spRFID" Image="Resources/RFID0.jpg" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="73" Canvas.Left="245" Canvas.Top="200" MouseDown="spRFID_Click">
+                <MyWpfControl:ImageBorder.Images>
+                    <ImageSource>Resources/RFID0.jpg</ImageSource>
+                    <ImageSource>Resources/RFID1.jpg</ImageSource>
+                </MyWpfControl:ImageBorder.Images>
+            </MyWpfControl:ImageBorder>
+            <MyWpfControl:ImageBorder x:Name="spCST" Image="Resources/CST_IN.png" HorizontalAlignment="Left" Height="131" VerticalAlignment="Top" Width="145" Canvas.Left="343" Canvas.Top="147" MouseDown="spCST_Click">
+                <MyWpfControl:ImageBorder.Images>
+                    <ImageSource>Resources/CST_IN.png</ImageSource>
+                    <ImageSource>Resources/CST_OUT.png</ImageSource>
+                </MyWpfControl:ImageBorder.Images>
+            </MyWpfControl:ImageBorder>
+            <MyWpfControl:StatusBorder x:Name="spShuttle" Text="SHUTTLE#1" Background="LightGray" Canvas.Left="369" Canvas.Top="287">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>LightGray</Brush>
+                    <Brush>Cyan</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+            </MyWpfControl:StatusBorder>
+
+            <Label Content="Charge Bar" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="245" Canvas.Top="385"/>
+            <MyWpfControl:StatusBorder x:Name="spChargeBar" Text="None" Width="80" Background="LightGray" Canvas.Left="347" Canvas.Top="391" MouseDown="spCST_Click">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>LightGray</Brush>
+                    <Brush>LimeGreen</Brush>
+                    <Brush>Red</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>NONE</System:String>
+                    <System:String>DOWN</System:String>
+                    <System:String>UP</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+            <Label Content="Charger Status" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="245" Canvas.Top="421"/>
+            <MyWpfControl:StatusBorder x:Name="spCharger" Text="OFF" Width="80" Background="LightGray" Canvas.Left="347" Canvas.Top="427" MouseDown="spCharger_Click">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>LightGray</Brush>
+                    <Brush>Red</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>OFF</System:String>
+                    <System:String>ON</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+        </Canvas>
+        <StackPanel Grid.Column="1">
+            <MyWpfControl:StatusBorder x:Name="chkAbnormal" Text="NORMAL" Foreground="White" Background="LimeGreen" Width="154" Height="30" Margin="0,15,0,0">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>LimeGreen</Brush>
+                    <Brush>Red</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>NORMAL</System:String>
+                    <System:String>ABNORMAL</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+            <MyWpfControl:StatusBorder x:Name="chkEmsStatus" Text="EMS NORMAL" Foreground="White" Background="LimeGreen" Width="154" Height="30" Margin="0,3,0,0">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>LimeGreen</Brush>
+                    <Brush>Red</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>EMS NORMAL</System:String>
+                    <System:String>EMS OFF</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+            <MyWpfControl:StatusBorder x:Name="chkAutoStatus" Text="AUTO STOP" Foreground="White" Background="Red" Width="154" Height="30" Margin="0,3,0,0">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>Red</Brush>
+                    <Brush>LimeGreen</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>AUTO STOP</System:String>
+                    <System:String>AUTO START</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+            <MyWpfControl:StatusBorder x:Name="chkOperModeStatus" Text="-" Foreground="White" Background="LimeGreen" Width="154" Height="30" Margin="0,3,0,0">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>White</Brush>
+                    <Brush>LimeGreen</Brush>
+                    <Brush>Yellow</Brush>
+                    <Brush>Red</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+                <MyWpfControl:StatusBorder.Texts>
+                    <System:String>-</System:String>
+                    <System:String>AUTO MODE</System:String>
+                    <System:String>MANUAL MODE</System:String>
+                    <System:String>TEACH MODE</System:String>
+                </MyWpfControl:StatusBorder.Texts>
+            </MyWpfControl:StatusBorder>
+            <Label Content="LIGHT CURTAIN" HorizontalAlignment="Center" Margin="0,20,0,5" Foreground="Blue" FontWeight="Bold"/>
+            <MyWpfControl:StatusBorder x:Name="chkLightCurtain1" Text="LIGHT CURTAIN #1" Foreground="White" Background="Red" Width="154" Height="30" Margin="0,0,0,0">
+                <MyWpfControl:StatusBorder.Brushs>
+                    <Brush>Red</Brush>
+                    <Brush>LimeGreen</Brush>
+                </MyWpfControl:StatusBorder.Brushs>
+            </MyWpfControl:StatusBorder>
+            <MyWpfControl:StatusButton x:Name="btnModeChange" Content="MODE CHANGE&#10;FORCE ON" Background="White" Height="53" Width="154" FontWeight="Bold" Margin="0,50,0,0" MouseDown="btnModeChange_MouseDown" MouseUp="btnModeChange_MouseUp">
+                <MyWpfControl:StatusButton.Brushs>
+                    <Brush>White</Brush>
+                    <Brush>LimeGreen</Brush>
+                </MyWpfControl:StatusButton.Brushs>
+            </MyWpfControl:StatusButton>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <MyWpfControl:StatusButton x:Name="btnFWD" Content="FWD" Background="White" Height="53" Width="70" FontWeight="Bold" Margin="0,0,5,0" MouseDown="btnFWD_MouseDown" MouseUp="btnFWD_MouseUp">
+                    <MyWpfControl:StatusButton.Brushs>
+                        <Brush>White</Brush>
+                        <Brush>LimeGreen</Brush>
+                    </MyWpfControl:StatusButton.Brushs>
+                </MyWpfControl:StatusButton>
+                <MyWpfControl:StatusButton x:Name="btnBWD" Content="BWD" Background="White" Height="53" Width="70" FontWeight="Bold" Margin="7,0,0,0" MouseDown="btnBWD_MouseDown" MouseUp="btnBWD_MouseUp">
+                    <MyWpfControl:StatusButton.Brushs>
+                        <Brush>White</Brush>
+                        <Brush>LimeGreen</Brush>
+                    </MyWpfControl:StatusButton.Brushs>
+                </MyWpfControl:StatusButton>
+            </StackPanel>
+            <MyWpfControl:StatusButton x:Name="btnLightOn" Content="LIGHT OFF" Background="White" Height="30" Width="154" Click="btnLightOn_Click" FontWeight="Bold" Margin="0,40,0,0">
+                <MyWpfControl:StatusButton.Brushs>
+                    <Brush>White</Brush>
+                    <Brush>LimeGreen</Brush>
+                </MyWpfControl:StatusButton.Brushs>
+                <MyWpfControl:StatusButton.Texts>
+                    <System:String>LIGHT OFF</System:String>
+                    <System:String>LIGHT ON</System:String>
+                </MyWpfControl:StatusButton.Texts>
+            </MyWpfControl:StatusButton>
+
+        </StackPanel>
+    </Grid>
+</Page>

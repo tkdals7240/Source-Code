@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35610F79-1FF3-4A38-BB1A-0AB4F976295A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>cpMgr</RootNamespace>
+    <AssemblyName>cpMgr</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cpMgr.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB">
+      <HintPath>..\..\Package\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Package\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MyWpfControl">
+      <HintPath>.\MyWpfControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DlgAbout.xaml.cs">
+      <DependentUpon>DlgAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgAutoBCR.xaml.cs">
+      <DependentUpon>DlgAutoBCR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgBcrReadFail.xaml.cs">
+      <DependentUpon>DlgBcrReadFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgKeyboard.xaml.cs">
+      <DependentUpon>DlgKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgLogin.xaml.cs">
+      <DependentUpon>DlgLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgMaintrance.xaml.cs">
+      <DependentUpon>DlgMaintrance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgManualCharge.xaml.cs">
+      <DependentUpon>DlgManualCharge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgManualNormal.xaml.cs">
+      <DependentUpon>DlgManualNormal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPassword.xaml.cs">
+      <DependentUpon>DlgPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPioMonitor.xaml.cs">
+      <DependentUpon>DlgPioMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GBL.cs" />
+    <Compile Include="LocalDB.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="MELSEC.cs" />
+    <Compile Include="MySendKey.cs" />
+    <Compile Include="MyUtil.cs" />
+    <Compile Include="PageControl.xaml.cs">
+      <DependentUpon>PageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAlarmHistory.xaml.cs">
+      <DependentUpon>PageAlarmHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUserAlarm.xaml.cs">
+      <DependentUpon>PageUserAlarm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCstHistory.xaml.cs">
+      <DependentUpon>PageCstHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCountLog.xaml.cs">
+      <DependentUpon>PageCountLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageAlarm.xaml.cs">
+      <DependentUpon>PageAlarm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUserMgr.xaml.cs">
+      <DependentUpon>PageUserMgr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageTimeoutSet.xaml.cs">
+      <DependentUpon>PageTimeoutSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMdmsSet.xaml.cs">
+      <DependentUpon>PageMdmsSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSetting.xaml.cs">
+      <DependentUpon>PageSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageLog.xaml.cs">
+      <DependentUpon>PageLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageStepStatus.xaml.cs">
+      <DependentUpon>PageStepStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageIoStatus.xaml.cs">
+      <DependentUpon>PageIoStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMonitor.xaml.cs">
+      <DependentUpon>PageMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageOperator.xaml.cs">
+      <DependentUpon>PageOperator.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DlgAbout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DlgAutoBCR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgBcrReadFail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgMaintrance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgManualCharge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgManualNormal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DlgPioMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAlarmHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageUserAlarm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageCstHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageCountLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageAlarm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageUserMgr.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageTimeoutSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageMdmsSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageLog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageStepStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageIoStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageOperator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagePioInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PagePioInterface.xaml.cs">
+      <DependentUpon>PagePioInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AdminIcon0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AdminIcon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AlarmIcon0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AlarmIcon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BuzzerIcon0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BuzzerIcon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ExitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MainIcon0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MainIcon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ACTMULTILib">
+      <Guid>{A306B141-AE98-11D3-83AE-00A024BDBF2B}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ActProgTypeLib">
+      <Guid>{CD7846DF-1C99-4BC0-8A8D-FBFB7FC26ACB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CST_IN.png" />
+    <Resource Include="Resources\CST_OUT.png" />
+    <Resource Include="Resources\DoNotTouch.png" />
+    <Resource Include="Resources\RFID0.jpg" />
+    <Resource Include="Resources\RFID1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TimeChart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\BuildDate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FMSTec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cpMgr.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FMSTec.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>echo %25date%25 %25time%25 &gt; "$(ProjectDir)\Properties\BuildDate.txt"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

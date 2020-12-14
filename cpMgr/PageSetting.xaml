@@ -1,0 +1,24 @@
+﻿<Page x:Class="cpMgr.PageSetting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cpMgr"
+      mc:Ignorable="d" 
+      d:DesignHeight="539" d:DesignWidth="1010"
+      Title="SETTING" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <RadioButton x:Name="rbMdms" Style="{StaticResource {x:Type ToggleButton}}" Content="M-DMS" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbMdms_Checked" Height="37"/>
+            <RadioButton x:Name="rbTimeout" Style="{StaticResource {x:Type ToggleButton}}" Content="TIMEOUT" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbTimeout_Checked" Height="37"/>
+            <Button Content="About" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134"  Height="37" Click="btnAbout_Click"/>
+            <RadioButton x:Name="rbUserMgr" Style="{StaticResource {x:Type ToggleButton}}" Content="User Manager" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbUserMgr_Checked" Height="37"/>
+        </StackPanel>
+        <Frame x:Name="frame1" Grid.Column="1" NavigationUIVisibility="Hidden" Padding="6" HorizontalContentAlignment = "Stretch" VerticalContentAlignment = "Stretch" Grid.ColumnSpan="3"/>
+    </Grid>
+</Page>

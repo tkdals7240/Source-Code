@@ -1,0 +1,24 @@
+﻿<Page x:Class="cpMgr.PageMonitor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cpMgr"
+      mc:Ignorable="d" 
+      d:DesignHeight="539" d:DesignWidth="1010"
+      Title="MONITOR">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <RadioButton x:Name="rbCountLog" Style="{StaticResource {x:Type ToggleButton}}" Content="COUNT LOG" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbCountLog_Checked" Height="37"/>
+            <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="PIO Interface" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbPioInterface_Checked" Height="37"/>
+            <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="I/O Status" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbIoStatus_Checked" Height="37"/>
+            <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="Step Status" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="134" Checked="rbStepStatus_Checked" Height="37"/>
+        </StackPanel>
+        <Frame x:Name="frame1" Grid.Column="1" NavigationUIVisibility="Hidden" Padding="6" HorizontalContentAlignment = "Stretch" VerticalContentAlignment = "Stretch" Grid.ColumnSpan="3"/>
+    </Grid>
+</Page>

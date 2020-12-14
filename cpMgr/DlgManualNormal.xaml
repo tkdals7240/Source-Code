@@ -1,0 +1,73 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cpMgr"
+        xmlns:MyWpfControl="clr-namespace:MyWpfControl;assembly=MyWpfControl" x:Class="cpMgr.DlgManualNormal"
+        mc:Ignorable="d"
+        Title="PORT#1-1" Height="300" Width="276" WindowStartupLocation="CenterOwner">
+    <Canvas x:Name="cvsMain">
+        <Label Content="FLOT" Canvas.Left="29" Canvas.Top="25"/>
+        <MyWpfControl:StatusButton x:Name="btnFloatOn" Content="ON" Canvas.Left="87" Canvas.Top="25" Width="53" Click="btnFloatOn_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnFloatOff" Content="OFF" Canvas.Left="145" Canvas.Top="25" Width="53" Click="btnFloatOff_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <Label Content="CEN'T" Canvas.Left="29" Canvas.Top="65"/>
+        <MyWpfControl:StatusButton x:Name="btnCenterOn" Content="ON" Canvas.Left="87" Canvas.Top="65" Width="53" Click="btnCenterOn_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnCenterOff" Content="OFF" Canvas.Left="145" Canvas.Top="65" Width="53" Click="btnCenterOff_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <Label Content="Charge&#10;Bar" Canvas.Left="29" Canvas.Top="97"/>
+        <MyWpfControl:StatusButton x:Name="btnChargeBarUp" Content="UP" Canvas.Left="87" Canvas.Top="105" Width="53" Click="btnChargeBarUp_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusButton x:Name="btnChargeBarDown" Content="DOWN" Canvas.Left="145" Canvas.Top="105" Width="53" Click="btnChargeBarDown_Click" Height="26">
+            <MyWpfControl:StatusButton.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusButton.Brushs>
+        </MyWpfControl:StatusButton>
+        <MyWpfControl:StatusBorder x:Name="spLamp1" Text=""  Width="20" Height="20" Canvas.Left="40" Canvas.Top="166">
+            <MyWpfControl:StatusBorder.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusBorder.Brushs>
+        </MyWpfControl:StatusBorder>
+        <Label Content="INPLACE 1" Canvas.Left="65" Canvas.Top="162"/>
+        <MyWpfControl:StatusBorder x:Name="spLamp2" Text=""  Width="20" Height="20" Canvas.Left="40" Canvas.Top="192">
+            <MyWpfControl:StatusBorder.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusBorder.Brushs>
+        </MyWpfControl:StatusBorder>
+        <Label Content="INPLACE 2" Canvas.Left="65" Canvas.Top="188"/>
+        <MyWpfControl:StatusBorder x:Name="spLamp3" Text=""  Width="20" Height="20" Canvas.Left="40" Canvas.Top="218">
+            <MyWpfControl:StatusBorder.Brushs>
+                <Brush>LightGray</Brush>
+                <Brush>LimeGreen</Brush>
+            </MyWpfControl:StatusBorder.Brushs>
+        </MyWpfControl:StatusBorder>
+        <Label Content="DIAGONAL DETECT" Canvas.Left="65" Canvas.Top="214"/>
+
+    </Canvas>
+</Window>

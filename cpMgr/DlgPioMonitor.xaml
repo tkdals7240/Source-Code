@@ -1,0 +1,262 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cpMgr"
+        xmlns:MyWpfControl="clr-namespace:MyWpfControl;assembly=MyWpfControl" x:Class="cpMgr.DlgPioMonitor"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner" 
+        Title="PIO Monitor" Height="485" Width="816" MinWidth="816" MinHeight="485">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="[ PORT SIDE ]" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <MyWpfControl:StatusBorder x:Name="spPort1" Text="LD_REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort2" Text="ULD_REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort3" Text="READY" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort4" Text="PORT ABNORMAL/ERROR" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort5" Text="NOT USED PORT" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort6" Text="INPUT MODE" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort7" Text="OUTPUT MODE" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort8" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort9" Text="CASEETTE CONTAIN" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort10" Text="PORT TYPE CHANGING" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort11" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort12" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort13" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort14" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort15" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort16" Text="LIGHT CURTAIN REPLY" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <MyWpfControl:StatusBorder x:Name="spPort17" Text="ID READ COMPLETE" Background="DarkGray" Height="22" Width="170" Margin="5,0,0,2" HorizontalAlignment="Left">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spPort18" Text="HEART BIT" Background="DarkGray" Height="22" Width="170" Margin="5,0,0,2" HorizontalAlignment="Left">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="[ STK SIDE ]" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <MyWpfControl:StatusBorder x:Name="spStk1" Text="TR_REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk2" Text="BUSY" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk3" Text="COMPLETE" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk4" Text="STK ABNORMAL/ERROR" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk5" Text="INPUT MODE REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk6" Text="OUTPUT MODE REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk7" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk8" Text="RESERVED REQUEST" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk9" Text="R/M#1 TRANSFER" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk10" Text="R/M#2 TRANSFER" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk11" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk12" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk13" Text="EARTH QUAKE" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk14" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk15" Text="RESERVED" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                    <MyWpfControl:StatusBorder x:Name="spStk16" Text="LIGHT CURTAIN" Background="DarkGray" Height="22" Width="170" Margin="0,1,5,2" HorizontalAlignment="Right">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <MyWpfControl:StatusBorder x:Name="spStk17" Text="HEART BIT" Background="DarkGray" Height="22" Width="170" Margin="5,0,0,2" HorizontalAlignment="Left">
+                        <MyWpfControl:StatusBorder.Brushs>
+                            <Brush>Gray</Brush>
+                            <Brush>LimeGreen</Brush>
+                        </MyWpfControl:StatusBorder.Brushs>
+                    </MyWpfControl:StatusBorder>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
